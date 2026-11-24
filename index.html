@@ -144,6 +144,19 @@
   .photo-equipe{width:100%;height:440px;object-fit:cover;object-position:center 58%;border-radius:var(--rayon);display:block;box-shadow:0 12px 34px rgba(40,24,12,.14)}
   @media (max-width:900px){.photo-equipe{height:300px}}
 
+  /* Savoir-faire : mise en page soignée */
+  .savoir{position:relative;background:linear-gradient(180deg,#efe5d6 0,var(--creme) 150px,var(--creme) 100%);padding-top:84px}
+  .savoir::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--chene),transparent);opacity:.55}
+  .savoir .chapo{font-family:"Cormorant Garamond",serif;font-size:clamp(1.3rem,2.4vw,1.55rem);line-height:1.45;color:var(--bois-fonce);font-weight:500;margin-bottom:20px}
+  .savoir .a-la-main{background:#fff;border:1px solid var(--sable);border-left:4px solid var(--chene);border-radius:14px;padding:16px 18px;box-shadow:0 8px 22px rgba(40,24,12,.07);color:var(--texte)}
+  .savoir .points{margin-top:22px;gap:10px}
+  .savoir .points li{align-items:center;background:rgba(255,255,255,.72);border:1px solid var(--sable);border-radius:12px;padding:12px 14px;font-weight:500;color:var(--bois-fonce)}
+  .savoir .points li::before{flex:0 0 22px;width:22px;height:22px;margin-top:0;border-radius:50%;background:var(--vert-wa) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
+  .savoir .photo-equipe{position:relative;z-index:1}
+  .savoir .apropos>img{position:relative}
+  @media (hover:hover){.savoir .points li{transition:transform .2s,box-shadow .2s}.savoir .points li:hover{transform:translateX(4px);box-shadow:0 6px 16px rgba(40,24,12,.08)}}
+  @media (max-width:900px){.savoir{padding-top:60px}.savoir .a-la-main{padding:14px 16px}}
+
   /* Services */
   .services{background:#fff}
   .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -310,15 +323,15 @@
   </div>
 </section>
 
-<section id="savoir-faire">
+<section id="savoir-faire" class="savoir">
   <div class="wrap apropos">
     <div>
       <div class="titre" style="margin-bottom:24px">
         <small>Notre savoir-faire</small>
         <h2>L'œil de l'artisan, la précision de la machine</h2>
       </div>
-      <p>Chez ABAKA Design, un meuble commence par une prise de mesures et une discussion. Ensuite, il est fabriqué en usine, avec des machines modernes qui garantissent des coupes nettes et des assemblages solides.</p>
-      <p>Le travail de finition, lui, reste à la main. C'est ce qui fait la différence entre un meuble qui tient et un meuble qui dure.</p>
+      <p class="chapo">Chez ABAKA Design, un meuble commence par une prise de mesures et une discussion. Ensuite, il est fabriqué en usine, avec des machines modernes qui garantissent des coupes nettes et des assemblages solides.</p>
+      <p class="a-la-main">Le travail de finition, lui, reste à la main. C'est ce qui fait la différence entre un meuble qui tient et un meuble qui dure.</p>
       <ul class="points">
         <li>Fabrication sur mesure, adaptée à la place réelle dont vous disposez</li>
         <li>Finitions soignées, du choix des matériaux jusqu'à la pose</li>
